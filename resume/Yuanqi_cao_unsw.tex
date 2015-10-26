@@ -1,0 +1,327 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Yuanqi Cao (John)}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+%\NewEntry{}{\textit{Born in China,}}{20 November 1987} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:caoyuanqi@gmail.com}{caoyuanqi@gmail.com}} % Email address
+
+\NewEntry{website}{\href{http://caoyuanqi.github.io}{http://caoyuanqi.github.io}} % Personal website
+
+\NewEntry{phone}{(M) +61 4 1615 0624\ }
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Profile \& Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{I am a programmer graduated from University Of New South Wales (UNSW) and I am looking for a job as a junior java programmer.
+  \vspace{0.3em} % Extra white space between the personal information section and goal
+  \newline
+  I am fimilar with J2EE programming and got some experience of plenty of J2EE frameworks, such as Spring, Hibernate, Servlet. I think I could get involved in the work as soon as possible. Recently, I am resonsible for the backend coding of one ecommercial website based on Spring, I think I am ready for this possition.
+  \vspace{0.3em} % Extra white space between the personal information section and goal
+  \newline
+  Beside Java, I could programming in some popular programming language as well and I keep dirty my finger with new technology in the spare time. I am an advanced Emacs user and for Java I am using eclipse. }
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Programming Skills}\vspace{1em}
+
+\Description{\MarginText{Frameworks}\textsc{Bootstrap}, \textsc{JavaServer Face + Servlet}, \textsc{Primeface}, \textsc{Spring}, \textsc{Spring DATA} \textsc{Hibernate} \textsc{Play}}
+
+\Description{\MarginText{Tools} \textsc{Maven}, \textsc{Git}, \textsc{Emacs}}
+
+\Description{\MarginText{Basic}\textsc{Matlab}, \textsc{Javascript}, \textsc{Apple Script}}
+
+\Description{\MarginText{Intermediate}\textsc{Shell} \textsc{Html}, \LaTeX, \textsc{Linux}, \textsc{Css}, \textsc{Emacs lisp} \textsc{Python} \textsc{Sql}}
+
+\Description{\MarginText{Advanced}\textsc{C}, \textsc{Emacs},\textsc{Java}, \textsc{Perl}, \textsc{Python}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+
+
+
+\NewEntry{2012-2014}{University Of New South Wales}
+
+\Description{\MarginText{Information Technology}
+\textit{Double Majors: Database System \& Internetworking}\newline
+Description: This degree focused on the Database system and Inter networking management, most course are programming based.}
+
+%------------------------------------------------
+
+\NewEntry{2005-2009}{Sichuan University, (Top 10 University in China)}
+
+\Description{\MarginText{Biotechnology(Bachelor)}\textit{Member of Wu Yuzhang Honour College (top 1.5\%)}\newline
+Description: This degree focussed on the development of scientific research skill concerning biology. Students were encouraged to take part in researching. I also was involved in one research publication.}
+
+\Description{\MarginText{Finance(Bachelor)}\textit{Second Degree}\newline
+Description: This degree gave a foundation of finance and focused on financial planning and strategic management}
+
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\noindent\spacedlowsmallcaps{Personal OnGoing Project}\vspace{1em}
+
+\NewEntry{2015.6-now}{Qiyue Shopping Site (Java framework)}
+
+\Description{\MarginText{J2EE Framwork} Qiyue: an ecommercial website as a shopping site but have some basic forum functions.
+  \newline
+  \MarginText{Technical implements}
+  That is a java Maven project Integrated with Spring, Hibernate, JSF and Apache Shiro, However the MVC framework is changing to Spring MVC and thymleaf was choosed as view solustion;  The back end is based on the Spring, including Core Spring, Spring Data Jpa(Dao solustion) Spirng MVC. Hibernate is persistence provider and Hibernate Validator is used as Validator;
+  \newline
+  JavaServer face was used as controller and PrimeFace is chosen for it's easy jqueryUI integration, But as the project changed, I switched to pure Spring;
+  \newline
+  Still working on the backside.
+}
+
+
+\noindent\spacedlowsmallcaps{Course Project Experience}\vspace{1em}
+
+
+\NewEntry{2014}{Python Translator And CGI Code  \textsc{(Perl based)}}
+
+\Description{\MarginText{Perl} This project aimed to give students experiment using perl and python. First part is to write a perl script to translate perl scripts into python script. Second part is to finish a online book store using perl with provided cgi framework
+}
+
+\NewEntry{2014}{Compressing and Searching  \textsc{(C based)}}
+
+\Description{\MarginText{BWT} The project aimed to apply a index construction, searching and compression in some mobile equipment, mainly using Burrows \&Wheeler transform compression technology. All part concerning BSW technology (indexing, searching and compressing) is implied in this project.
+
+}
+
+
+\NewEntry{2014}{Web Application  \textsc{(Java based)}}
+
+\Description{\MarginText{Service Oriented Architectures} The project aimed to develop web application using  SOA concepts and related technologies such as SOAP, WSDL and REST technology. Web application and data service were designed and implied in this project.
+}
+
+\NewEntry{2013}{Web Application  \textsc{(Java + jsp  based)}}
+
+\Description{\MarginText{Web Application Engineering} The project aimed to develop web core concepts and practical skills for server-side infrastructure for Web applications.  One web site was made in this project (using jsp, Servlets).
+}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+
+
+%% CPET phantom
+\NewEntry{11.9-12.2}{Assistant Manager, \textsc{Chengdu Phantom Emulation Technology}}
+
+\Description{\MarginText{CPET} Helped to rebuild the organisation structure; Business strategy planning and market analysis; Product Strategy planning; 
+  \\ Reference: Daquan \textsc{Lin}\ \ $\cdotp$\ \ +86 138 8087 0450\ \ $\cdotp$\ \ \href{mailto:linphantom1@163.com}{ linphantom1@163.com}}
+
+%% Taiping life
+
+\NewEntry{09.9-11.7}{Data Analyst And Consultant, \textsc{Taiping Life Insurance}}
+
+\Description{\MarginText{Taiping Life Insurance} Mining and analysis data using excel daily based; Introduced some technologies for time management and better communication; Product introduction and management (rewarded); Local corporation reporter (reworded)
+  \\ Reference: Ming \textsc{Lin}\ \ $\cdotp$\ \ +86 138 8226 7722\ \ $\cdotp$\ \ \href{mailto:linming@tplife.com}{linming@tplife.com}}
+
+%% Junyao
+
+\NewEntry{09.6-09.8}{Assitant, \textsc{JunYao Management Consulting}}
+
+\Description{\MarginText{Junyao Management Consulting} Responsibility for the campus recruitment of Johnson \& Johnson; In the medical team (Customer are J \& J / Novartis).}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	Activitise
+%----------------------------------------------------------------------------------------
+
+
+\noindent\spacedlowsmallcaps{Activities}\vspace{1em}
+
+%% Competition of the business
+\NewEntry{08.4-08.6}{Team leader, \textsc{The 10\textsuperscript{th} Challenge-Cup Business Plan Competition }}
+
+\Description{\MarginText{Business Competition}Grouped a team to take a part in this competition; Taking charge for the daily affairs, external contact (hospital and university), information gathering and supervising; Successfully contacted with the IEAE (THE INTERNATIONAL ATOMIC ENERGY AGENCY) and obtained its support; The team gained the 3\textsuperscript{rd} Prize of the Sichuan University
+} 
+
+%% The camp
+
+\NewEntry{08.6-08.7}{Group Leader, \textsc{THE 4\textsuperscript{th} 'Mainland-Taiwan' Undergraduate Palaeontology Summer Camp}}
+
+\Description{\MarginText{Scientific CAMP} Participated a scientific camp organised by IVPP (Institute Vertebrate Palaeontology And Paleoanthropology) and Science Monthly (TAIWAN), with a team of 36 students (Mainland and Taiwan) of different backgrounds; As a leader of 6-students group.
+}                               %End of the camp description
+
+
+%% Junyao
+
+\NewEntry{07.7-07.8}{Team Member, \textsc{SCU-MIT Summer Curriculum Camp}}
+
+\Description{\MarginText{SCU-MIT Camp}Participated an academic camp, which is organised by the Sichuan University and Massachusetts Institute of Technology (MIT); The theme of the camp is the relationship between science and economy
+}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Scientific Research}\vspace{1em}
+
+\NewEntry{May 2009}{Morphological anatomical studies on seven natural populations of Rhodobryum roseum (Weis.) Limpr.
+}
+
+\Description{\MarginText{Scientific publication}
+Paticipating this research and was the forth author of this article
+
+}
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\Description{\MarginText{Awards}2011.3\ \ $\cdotp$\ \ Outstanding new correspondent in Taiping life insurance}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2011.5\ \ $\cdotp$\ \ Outstanding product expert of Taiping life insurance}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2011.5\ \ $\cdotp$\ \ Outstanding product expert of Taiping life insurance}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2008.10\ \ $\cdotp$\ \ Outstanding student of Sichuan University}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2008.10\ \ $\cdotp$\ \ The 3\textsuperscript{rd} Prize scholarship of Sichuan University according to quantity}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2008.7\ \ $\cdotp$\ \ The 3\textsuperscript{rd} Prize of Sichuan University in the 10\textsuperscript{th} challenge-cup business plan competition}
+
+
+%% %------------------------------------------------
+
+%% \vspace{1em}
+
+%% \Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%% \Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+%% %------------------------------------------------
+
+\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{Chinese} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{Chinese}}\ \ $\cdotp$\ \ \ Mother tongue}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+\Description{\MarginText{Interests}Table tenis\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Coding}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
